@@ -367,7 +367,6 @@ public class ApiModels {
         public String username;
         public int wins;
     }
-
     public static class LeaderboardResponse {
         public List<LeaderboardEntry> entries;
     }

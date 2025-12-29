@@ -79,10 +79,10 @@ public interface ApiService {
     Call<ApiResponse<BingoResponse>> claimBingo(@Path("matchId") String matchId);
 
     // ==================== LEADERBOARD ====================
-    
     @GET("leaderboard/global")
-    Call<ApiResponse<List<LeaderboardEntry>>> getGlobalLeaderboard();
+    Call<ApiResponse<LeaderboardResponse>> getGlobalLeaderboard();
 
     @GET("leaderboard/friends")
-    Call<ApiResponse<List<LeaderboardEntry>>> getFriendsLeaderboard();
+    Call<ApiResponse<LeaderboardResponse>> getFriendsLeaderboard();
+
 }

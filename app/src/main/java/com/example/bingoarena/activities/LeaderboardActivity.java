@@ -149,43 +149,53 @@ public class LeaderboardActivity extends BaseActivity {
             showSkeletons();
         }
 
-        Call<ApiModels.ApiResponse<List<ApiModels.LeaderboardEntry>>> call =
+        Call<ApiModels.ApiResponse<ApiModels.LeaderboardResponse>> call =
                 isGlobal ? apiService.getGlobalLeaderboard() : apiService.getFriendsLeaderboard();
 
-        call.enqueue(new Callback<ApiModels.ApiResponse<List<ApiModels.LeaderboardEntry>>>() {
+        call.enqueue(new Callback<ApiModels.ApiResponse<ApiModels.LeaderboardResponse>>() {
             @Override
             public void onResponse(
-                    Call<ApiModels.ApiResponse<List<ApiModels.LeaderboardEntry>>> call,
-                    Response<ApiModels.ApiResponse<List<ApiModels.LeaderboardEntry>>> response
+                    Call<ApiModels.ApiResponse<ApiModels.LeaderboardResponse>> call,
+                    Response<ApiModels.ApiResponse<ApiModels.LeaderboardResponse>> response
             ) {
                 swipeRefresh.setRefreshing(false);
                 hideSkeletons();
 
                 if (response.isSuccessful() && response.body() != null && response.body().success) {
                     List<LeaderboardEntry> entries = new ArrayList<>();
-                    int rank = 1;
-                    if (response.body().data != null) {
-                        for (ApiModels.LeaderboardEntry e : response.body().data) {
-                            entries.add(new LeaderboardEntry(rank++, e.displayName, e.username, e.wins));
+                    List<ApiModels.LeaderboardEntry> apiEntries =
+                            response.body().data != null ? response.body().data.entries : null;
+
+                    if (apiEntries != null) {
+                        int rank = 1;
+                        for (ApiModels.LeaderboardEntry e : apiEntries) {
+                            String name = e.displayName != null ? e.displayName : "";
+                            String username = e.username != null ? e.username : "";
+                            entries.add(new LeaderboardEntry(rank++, name, username, e.wins));
                         }
                     }
+
                     if (isGlobal) {
                         globalEntries = entries;
                     } else {
                         friendsEntries = entries;
                     }
                     displayLeaderboard(entries);
+                    return;
                 }
+
+                displayLeaderboard(new ArrayList<>());
             }
 
             @Override
             public void onFailure(
-                    Call<ApiModels.ApiResponse<List<ApiModels.LeaderboardEntry>>> call,
+                    Call<ApiModels.ApiResponse<ApiModels.LeaderboardResponse>> call,
                     Throwable t
             ) {
                 swipeRefresh.setRefreshing(false);
                 hideSkeletons();
                 Log.e(TAG, "Load error: " + t.getMessage());
+                displayLeaderboard(new ArrayList<>());
             }
         });
     }
@@ -202,7 +212,10 @@ public class LeaderboardActivity extends BaseActivity {
         if (entries.size() >= 1) {
             tvRank1Name.setText(entries.get(0).getDisplayName());
             tvRank1Wins.setText(entries.get(0).getWins() + " wins");
-            tvRank1Initial.setText(entries.get(0).getDisplayName().substring(0, 1).toUpperCase());
+            tvRank1Initial.setText(entries.get(0).getDisplayName() != null && !entries.get(0).getDisplayName().isEmpty()
+                    ? entries.get(0).getDisplayName().substring(0, 1).toUpperCase()
+                    : "?");
+
         }
         if (entries.size() >= 2) {
             tvRank2Name.setText(entries.get(1).getDisplayName());
