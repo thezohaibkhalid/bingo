@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Board Setup -->
+    <LinearLayout android:id="@+id/boardSetupContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/space_grotesk_bold" android:text="@string/set_up_your_board" android:textColor="@color/foreground" android:textSize="24sp" />
+        <TextView android:id="@+id/tvSetupOpponent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/muted_foreground" />
+        <GridLayout android:id="@+id/gridBoardSetup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:columnCount="5" android:rowCount="5" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:gravity="center" android:orientation="horizontal">
+            <Button android:id="@+id/btnShuffle" style="@style/Widget.BingoArena.Button.Secondary" android:layout_width="0dp" android:layout_height="52dp" android:layout_marginEnd="8dp" android:layout_weight="1" android:text="@string/shuffle" />
+            <Button android:id="@+id/btnConfirmBoard" style="@style/Widget.BingoArena.Button.Primary" android:layout_width="0dp" android:layout_height="52dp" android:layout_marginStart="8dp" android:layout_weight="1" android:text="@string/confirm_board" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Game Board -->
+    <LinearLayout android:id="@+id/gameBoardContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:id="@+id/tvOpponentName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/space_grotesk_bold" android:textColor="@color/foreground" android:textSize="20sp" />
+            <TextView android:id="@+id/tvTurnIndicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_medium" android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <TextView android:id="@+id/tvTimeLeft" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="@color/warning" />
+            <TextView android:id="@+id/tvMoves" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/muted_foreground" />
+        </LinearLayout>
+        <GridLayout android:id="@+id/gridGameBoard" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="16dp" android:layout_weight="1" android:columnCount="5" android:rowCount="5" />
+        <Button android:id="@+id/btnClaimBingo" style="@style/Widget.BingoArena.Button.Primary" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="16dp" android:text="@string/claim_bingo" />
+    </LinearLayout>
+
+    <!-- Waiting -->
+    <LinearLayout android:id="@+id/waitingContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:visibility="gone">
+        <ProgressBar android:layout_width="48dp" android:layout_height="48dp" android:indeterminateTint="@color/primary" />
+        <TextView android:id="@+id/tvWaitingMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textColor="@color/muted_foreground" />
+    </LinearLayout>
+
+    <!-- Result -->
+    <LinearLayout android:id="@+id/resultContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="24dp" android:visibility="gone">
+        <ImageView android:id="@+id/ivResultIcon" android:layout_width="80dp" android:layout_height="80dp" />
+        <TextView android:id="@+id/tvResultTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:fontFamily="@font/space_grotesk_bold" android:textColor="@color/foreground" android:textSize="32sp" />
+        <TextView android:id="@+id/tvResultMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/muted_foreground" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:id="@+id/tvYourLines" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/space_grotesk_bold" android:textColor="@color/foreground" android:textSize="28sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/your_lines" android:textColor="@color/muted_foreground" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:id="@+id/tvOpponentLines" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/space_grotesk_bold" android:textColor="@color/foreground" android:textSize="28sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/opponent_lines" android:textColor="@color/muted_foreground" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:id="@+id/btnPlayAgain" style="@style/Widget.BingoArena.Button.Primary" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="32dp" android:text="@string/play_again" />
+        <Button android:id="@+id/btnBackToDashboard" style="@style/Widget.BingoArena.Button.Outline" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="12dp" android:text="@string/back_to_dashboard" />
+    </LinearLayout>
+
+    <FrameLayout android:id="@+id/loadingOverlay" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background" android:visibility="gone">
+        <ProgressBar android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:indeterminateTint="@color/primary" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+    
+    <!-- Bingo grid icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,34h8v8h-8zM46,34h8v8h-8zM58,34h8v8h-8zM34,46h8v8h-8zM46,46h8v8h-8zM58,46h8v8h-8zM34,58h8v8h-8zM46,58h8v8h-8zM58,58h8v8h-8z" />
+    
+    <!-- Diagonal line through grid -->
+    <path
+        android:strokeColor="#0A0A0B"
+        android:strokeWidth="3"
+        android:pathData="M34,34L66,66" />
+</vector>

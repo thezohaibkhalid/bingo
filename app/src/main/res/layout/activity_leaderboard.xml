@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/space_grotesk_bold"
+                    android:text="@string/leaderboard"
+                    android:textColor="@color/foreground"
+                    android:textSize="28sp" />
+
+                <!-- Tabs -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    app:tabIndicatorColor="@color/primary"
+                    app:tabSelectedTextColor="@color/foreground"
+                    app:tabTextColor="@color/muted_foreground">
+                    <com.google.android.material.tabs.TabItem android:text="@string/global" />
+                    <com.google.android.material.tabs.TabItem android:text="@string/friends" />
+                </com.google.android.material.tabs.TabLayout>
+
+                <!-- Skeleton Loading for Podium -->
+                <LinearLayout
+                    android:id="@+id/skeletonPodium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="32dp">
+                        <View
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/bg_skeleton_circle" />
+                        <View
+                            android:layout_width="60dp"
+                            android:layout_height="14dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/bg_skeleton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:background="@drawable/bg_skeleton_circle" />
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="16dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/bg_skeleton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="48dp">
+                        <View
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_skeleton_circle" />
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/bg_skeleton" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Podium for Top 3 -->
+                <LinearLayout
+                    android:id="@+id/podiumContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- 2nd Place -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="32dp">
+                        <FrameLayout
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/bg_avatar">
+                            <TextView
+                                android:id="@+id/tvRank2Initial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/inter_bold"
+                                android:textColor="@color/primary"
+                                android:textSize="20sp" />
+                        </FrameLayout>
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/ic_trophy"
+                            app:tint="@color/silver" />
+                        <TextView
+                            android:id="@+id/tvRank2Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/foreground"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tvRank2Wins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/muted_foreground"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- 1st Place -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <FrameLayout
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:background="@drawable/bg_avatar">
+                            <TextView
+                                android:id="@+id/tvRank1Initial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/inter_bold"
+                                android:textColor="@color/primary"
+                                android:textSize="24sp" />
+                        </FrameLayout>
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/ic_trophy"
+                            app:tint="@color/gold" />
+                        <TextView
+                            android:id="@+id/tvRank1Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/foreground"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/tvRank1Wins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/muted_foreground"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- 3rd Place -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="48dp">
+                        <FrameLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_avatar">
+                            <TextView
+                                android:id="@+id/tvRank3Initial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/inter_bold"
+                                android:textColor="@color/primary"
+                                android:textSize="18sp" />
+                        </FrameLayout>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/ic_trophy"
+                            app:tint="@color/bronze" />
+                        <TextView
+                            android:id="@+id/tvRank3Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/foreground"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tvRank3Wins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/muted_foreground"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Skeleton List -->
+                <LinearLayout
+                    android:id="@+id/skeletonList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/skeleton_leaderboard_item" />
+                    <include layout="@layout/skeleton_leaderboard_item" />
+                    <include layout="@layout/skeleton_leaderboard_item" />
+                </LinearLayout>
+
+                <!-- Rest of leaderboard -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLeaderboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Empty State -->
+                <LinearLayout
+                    android:id="@+id/emptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="32dp"
+                    android:visibility="gone">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/ic_trophy"
+                        app:tint="@color/muted_foreground" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="No entries yet"
+                        android:textColor="@color/muted_foreground" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="@color/card"
+        app:itemIconTint="@drawable/selector_nav_item"
+        app:itemTextColor="@drawable/selector_nav_item"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

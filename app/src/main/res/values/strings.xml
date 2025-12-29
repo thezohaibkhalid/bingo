@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bingo Arena</string>
+    
+    <!-- Landing Page -->
+    <string name="landing_title">Challenge Friends to Epic Bingo Battles</string>
+    <string name="landing_subtitle">Real-time multiplayer Bingo. Challenge friends, climb leaderboards, become the ultimate Bingo champion.</string>
+    <string name="start_playing">Start Playing</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    
+    <!-- Features -->
+    <string name="feature_realtime">Real-time Multiplayer</string>
+    <string name="feature_realtime_desc">Play against friends in real-time with instant updates and live game state sync.</string>
+    <string name="feature_friends">Friend System</string>
+    <string name="feature_friends_desc">Add friends, send challenges, and build your Bingo community.</string>
+    <string name="feature_leaderboard">Leaderboards</string>
+    <string name="feature_leaderboard_desc">Compete globally and among friends. Track your stats and climb the ranks.</string>
+    
+    <!-- Auth -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="enter_credentials">Enter your credentials to continue</string>
+    <string name="create_account">Create Account</string>
+    <string name="join_bingo">Join Bingo Arena and start playing</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="display_name">Display Name</string>
+    <string name="email_placeholder">you@example.com</string>
+    <string name="password_placeholder">••••••••</string>
+    <string name="username_placeholder">coolplayer123</string>
+    <string name="display_name_placeholder">Your Name</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="otp_sent">Enter the code sent to your email</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    
+    <!-- Dashboard -->
+    <string name="welcome_user">Welcome back, %s</string>
+    <string name="ready_to_play">Ready to play some Bingo?</string>
+    <string name="active_matches">Active Matches</string>
+    <string name="total_wins">Total Wins</string>
+    <string name="friends">Friends</string>
+    <string name="pending_invites">Pending Invites</string>
+    <string name="no_active_matches">No active matches</string>
+    <string name="start_new_match">Start a new match with a friend!</string>
+    <string name="find_friends">Find Friends</string>
+    <string name="view_all">View All</string>
+    <string name="online_now">Online Now</string>
+    
+    <!-- Friends -->
+    <string name="search_users">Search users...</string>
+    <string name="my_friends">My Friends</string>
+    <string name="requests">Requests</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="challenge">Challenge</string>
+    <string name="pending">Pending</string>
+    <string name="incoming_requests">Incoming Requests</string>
+    <string name="outgoing_requests">Outgoing Requests</string>
+    <string name="no_friends">No friends yet</string>
+    <string name="no_requests">No pending requests</string>
+    
+    <!-- Matches -->
+    <string name="matches">Matches</string>
+    <string name="active">Active</string>
+    <string name="completed">Completed</string>
+    <string name="your_turn">Your Turn</string>
+    <string name="their_turn">Their Turn</string>
+    <string name="setting_up">Setting Up</string>
+    <string name="waiting">Waiting</string>
+    <string name="won">Won</string>
+    <string name="lost">Lost</string>
+    <string name="continue_match">Continue</string>
+    <string name="view_result">View Result</string>
+    
+    <!-- Game -->
+    <string name="board_setup">Board Setup</string>
+    <string name="set_up_your_board">Set Up Your Board</string>
+    <string name="playing_against">Playing against %s</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="confirm_board">Confirm Board</string>
+    <string name="tap_to_swap">Tap two cells to swap positions</string>
+    <string name="waiting_for_opponent">Waiting for opponent...</string>
+    <string name="your_board_is_set">Your board is set! Waiting for %s to set their board.</string>
+    <string name="claim_bingo">Claim Bingo!</string>
+    <string name="time_left">Time Left: %d</string>
+    <string name="moves">Moves: %d</string>
+    
+    <!-- Match Result -->
+    <string name="victory">Victory!</string>
+    <string name="defeat">Defeat</string>
+    <string name="congratulations">Congratulations! You won the match!</string>
+    <string name="opponent_won">%s won this round</string>
+    <string name="your_lines">Your Lines</string>
+    <string name="opponent_lines">Opponent Lines</string>
+    <string name="play_again">Play Again</string>
+    <string name="back_to_dashboard">Back to Dashboard</string>
+    
+    <!-- Leaderboard -->
+    <string name="leaderboard">Leaderboard</string>
+    <string name="global">Global</string>
+    <string name="rank">Rank</string>
+    <string name="player">Player</string>
+    <string name="wins">Wins</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
+    
+    <!-- Notifications -->
+    <string name="notifications">Notifications</string>
+    <string name="no_notifications">No notifications</string>
+    <string name="clear_all">Clear All</string>
+    <string name="match_invite">Match Invite</string>
+    <string name="friend_request">Friend Request</string>
+    
+    <!-- Errors -->
+    <string name="error_occurred">An error occurred</string>
+    <string name="try_again">Try Again</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="loading">Loading...</string>
+</resources>

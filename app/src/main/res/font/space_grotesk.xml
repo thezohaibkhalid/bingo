@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Download from: https://fonts.google.com/specimen/Space+Grotesk -->
+    <!-- Place space_grotesk_bold.ttf in this folder -->
+    <font
+        android:font="@font/space_grotesk_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/space_grotesk_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+</font-family>

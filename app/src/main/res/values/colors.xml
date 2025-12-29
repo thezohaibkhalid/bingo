@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Dark Gaming Theme -->
+    <color name="background">#1A1A2E</color>
+    <color name="background_dark">#121220</color>
+    <color name="foreground">#F2F2F2</color>
+    
+    <!-- Card Colors -->
+    <color name="card">#232338</color>
+    <color name="card_foreground">#F2F2F2</color>
+    
+    <!-- Primary - Green Gaming Accent -->
+    <color name="primary">#4ADE80</color>
+    <color name="primary_dark">#22C55E</color>
+    <color name="primary_foreground">#1A1A2E</color>
+    <color name="primary_10">#1A4ADE80</color>
+    <color name="primary_20">#334ADE80</color>
+    
+    <!-- Secondary -->
+    <color name="secondary">#2D2D44</color>
+    <color name="secondary_foreground">#F2F2F2</color>
+    
+    <!-- Muted -->
+    <color name="muted">#2D2D44</color>
+    <color name="muted_foreground">#9CA3AF</color>
+    
+    <!-- Border -->
+    <color name="border">#3D3D5C</color>
+    <color name="input">#2D2D44</color>
+    
+    <!-- Status Colors -->
+    <color name="destructive">#EF4444</color>
+    <color name="destructive_foreground">#F2F2F2</color>
+    <color name="success">#4ADE80</color>
+    <color name="warning">#F59E0B</color>
+    <color name="info">#3B82F6</color>
+    
+    <!-- Game Specific -->
+    <color name="game_glow">#4D4ADE80</color>
+    <color name="gold">#FFD700</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="bronze">#CD7F32</color>
+    
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

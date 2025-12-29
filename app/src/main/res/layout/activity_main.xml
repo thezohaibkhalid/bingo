@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Navbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <!-- Logo -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_button_primary">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_gamepad"
+                        app:tint="@color/primary_foreground" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/space_grotesk_bold"
+                    android:text="Bingo Arena"
+                    android:textColor="@color/foreground"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Auth Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    style="@style/Widget.BingoArena.Button.Ghost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/login" />
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    style="@style/Widget.BingoArena.Button.Primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/sign_up" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Hero Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="80dp"
+            android:paddingBottom="60dp">
+
+            <!-- Badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_gamepad"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Multiplayer Bingo"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:gravity="center"
+                android:text="@string/landing_title"
+                android:textColor="@color/foreground"
+                android:textSize="36sp"
+                android:lineSpacingMultiplier="1.1" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:text="@string/landing_subtitle"
+                android:textColor="@color/muted_foreground"
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.4" />
+
+            <!-- CTA Button -->
+            <Button
+                android:id="@+id/btnStartPlaying"
+                style="@style/Widget.BingoArena.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:paddingHorizontal="32dp"
+                android:text="@string/start_playing"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Features Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:gravity="center"
+                android:text="Features"
+                android:textColor="@color/foreground"
+                android:textSize="28sp" />
+
+            <!-- Feature Cards Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <!-- Feature 1 -->
+                <include
+                    android:id="@+id/feature1"
+                    layout="@layout/item_feature" />
+
+                <!-- Feature 2 -->
+                <include
+                    android:id="@+id/feature2"
+                    layout="@layout/item_feature"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Feature 3 -->
+                <include
+                    android:id="@+id/feature3"
+                    layout="@layout/item_feature"
+                    android:layout_marginTop="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- How To Play Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondary"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="48dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:gravity="center"
+                android:text="How To Play"
+                android:textColor="@color/foreground"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:text="Get started in 3 simple steps"
+                android:textColor="@color/muted_foreground"
+                android:textSize="16sp" />
+
+            <!-- Steps -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <!-- Step 1 -->
+                <include
+                    android:id="@+id/step1"
+                    layout="@layout/item_step" />
+
+                <!-- Step 2 -->
+                <include
+                    android:id="@+id/step2"
+                    layout="@layout/item_step"
+                    android:layout_marginTop="24dp" />
+
+                <!-- Step 3 -->
+                <include
+                    android:id="@+id/step3"
+                    layout="@layout/item_step"
+                    android:layout_marginTop="24dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CTA Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="60dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:gravity="center"
+                android:text="Ready to Play?"
+                android:textColor="@color/foreground"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:text="Join thousands of players and start your Bingo journey today."
+                android:textColor="@color/muted_foreground"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnGetStarted"
+                style="@style/Widget.BingoArena.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:paddingHorizontal="40dp"
+                android:text="Get Started"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="24dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_button_primary">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_gamepad"
+                        app:tint="@color/primary_foreground" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/space_grotesk_bold"
+                    android:text="Bingo Arena"
+                    android:textColor="@color/foreground"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="© 2024 Bingo Arena. All rights reserved."
+                android:textColor="@color/muted_foreground"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
