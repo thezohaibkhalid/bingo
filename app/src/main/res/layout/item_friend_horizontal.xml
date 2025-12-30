@@ -26,7 +26,6 @@
                 android:textSize="20sp" />
         </FrameLayout>
 
-        <!-- Online indicator -->
         <View
             android:id="@+id/onlineIndicator"
             android:layout_width="14dp"
@@ -48,14 +47,12 @@
         android:textColor="@color/foreground"
         android:textSize="13sp" />
 
-    <!-- Hidden username for data binding -->
     <TextView
         android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <!-- Challenge Button -->
     <Button
         android:id="@+id/btnAction"
         style="@style/Widget.BingoArena.Button.Primary"

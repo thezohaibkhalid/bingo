@@ -14,7 +14,6 @@
         android:gravity="center_vertical"
         android:padding="16dp">
 
-        <!-- Avatar -->
         <FrameLayout
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -31,7 +30,6 @@
                 android:textSize="18sp" />
         </FrameLayout>
 
-        <!-- Info -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -59,7 +57,6 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- Actions for incoming -->
         <LinearLayout
             android:id="@+id/actionsContainer"
             android:layout_width="wrap_content"
@@ -89,7 +86,6 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- Pending badge for outgoing -->
         <TextView
             android:id="@+id/tvPending"
             android:layout_width="wrap_content"

@@ -14,7 +14,6 @@
         android:gravity="center_vertical"
         android:padding="16dp">
 
-        <!-- Rank -->
         <TextView
             android:id="@+id/tvRank"
             android:layout_width="32dp"
@@ -25,7 +24,6 @@
             android:textColor="@color/muted_foreground"
             android:textSize="16sp" />
 
-        <!-- Avatar -->
         <FrameLayout
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -43,7 +41,6 @@
                 android:textSize="16sp" />
         </FrameLayout>
 
-        <!-- Info -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -70,7 +67,6 @@
                 android:textSize="13sp" />
         </LinearLayout>
 
-        <!-- Wins -->
         <TextView
             android:id="@+id/tvWins"
             android:layout_width="wrap_content"

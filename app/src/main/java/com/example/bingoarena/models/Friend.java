@@ -21,7 +21,6 @@ public class Friend {
         this.username = username;
         this.avatarUrl = avatarUrl;
         this.lastOnlineAt = lastOnlineAt;
-        // Consider online if last online within 5 minutes
         this.isOnline = lastOnlineAt != null && !lastOnlineAt.isEmpty();
     }
 

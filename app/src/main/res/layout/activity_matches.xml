@@ -43,7 +43,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <!-- Skeleton Loading -->
                 <LinearLayout
                     android:id="@+id/skeletonContainer"
                     android:layout_width="match_parent"

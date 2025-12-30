@@ -17,7 +17,6 @@
         android:orientation="horizontal"
         android:padding="16dp">
 
-        <!-- Avatar with Online Indicator -->
         <FrameLayout
             android:layout_width="48dp"
             android:layout_height="48dp">
@@ -38,7 +37,6 @@
                     android:textSize="18sp" />
             </FrameLayout>
 
-            <!-- Online indicator -->
             <View
                 android:id="@+id/onlineIndicator"
                 android:layout_width="14dp"
@@ -48,7 +46,6 @@
                 android:visibility="gone" />
         </FrameLayout>
 
-        <!-- Info -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -76,7 +73,6 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- Action Button -->
         <Button
             android:id="@+id/btnAction"
             style="@style/Widget.BingoArena.Button.Primary"

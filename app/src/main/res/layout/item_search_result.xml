@@ -14,7 +14,6 @@
         android:gravity="center_vertical"
         android:padding="16dp">
 
-        <!-- Avatar -->
         <FrameLayout
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -31,7 +30,6 @@
                 android:textSize="18sp" />
         </FrameLayout>
 
-        <!-- Info -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -59,7 +57,6 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- Add Friend Button -->
         <Button
             android:id="@+id/btnAddFriend"
             style="@style/Widget.BingoArena.Button.Primary"

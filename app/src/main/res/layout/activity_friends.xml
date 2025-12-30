@@ -11,7 +11,6 @@
         android:layout_marginBottom="56dp"
         android:orientation="vertical">
 
-        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +71,6 @@
             </FrameLayout>
         </LinearLayout>
 
-        <!-- Search Results (hidden by default) -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSearchResults"
             android:layout_width="match_parent"
@@ -80,7 +78,6 @@
             android:paddingHorizontal="16dp"
             android:visibility="gone" />
 
-        <!-- Tabs -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
@@ -105,7 +102,6 @@
                 android:text="@string/requests" />
         </com.google.android.material.tabs.TabLayout>
 
-        <!-- ViewPager with SwipeRefresh -->
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefresh"
             android:layout_width="match_parent"
@@ -120,7 +116,6 @@
 
     </LinearLayout>
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"

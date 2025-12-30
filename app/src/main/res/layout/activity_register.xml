@@ -13,7 +13,6 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- Logo -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +42,6 @@
                 android:textSize="24sp" />
         </LinearLayout>
 
-        <!-- Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +58,6 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
-                <!-- Header -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -80,14 +77,12 @@
                     android:textColor="@color/muted_foreground"
                     android:textSize="14sp" />
 
-                <!-- Form -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:orientation="vertical">
 
-                    <!-- Email Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -124,7 +119,6 @@
                             app:tint="@color/muted_foreground" />
                     </FrameLayout>
 
-                    <!-- Username Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -161,7 +155,6 @@
                             android:src="@drawable/ic_at_sign"
                             app:tint="@color/muted_foreground" />
 
-                        <!-- Username availability indicator -->
                         <ImageView
                             android:id="@+id/ivUsernameStatus"
                             android:layout_width="20dp"
@@ -180,7 +173,6 @@
                             android:visibility="gone" />
                     </FrameLayout>
 
-                    <!-- Display Name Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -218,7 +210,6 @@
                             app:tint="@color/muted_foreground" />
                     </FrameLayout>
 
-                    <!-- Password Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -256,7 +247,6 @@
                             app:tint="@color/muted_foreground" />
                     </FrameLayout>
 
-                    <!-- Register Button -->
                     <Button
                         android:id="@+id/btnRegister"
                         style="@style/Widget.BingoArena.Button.Primary"
@@ -265,7 +255,6 @@
                         android:layout_marginTop="24dp"
                         android:text="@string/create_account" />
 
-                    <!-- Loading -->
                     <ProgressBar
                         android:id="@+id/progressBar"
                         android:layout_width="24dp"
@@ -276,7 +265,6 @@
                         android:visibility="gone" />
                 </LinearLayout>
 
-                <!-- Login Link -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

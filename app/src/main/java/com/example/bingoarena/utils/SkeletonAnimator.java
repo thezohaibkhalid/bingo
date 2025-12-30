@@ -7,15 +7,11 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Utility class to animate skeleton loading views with a shimmer-like pulse effect.
- */
+
 public class SkeletonAnimator {
     private final List<ObjectAnimator> animators = new ArrayList<>();
-    
-    /**
-     * Start pulsing animation on all skeleton views in the container.
-     */
+
+
     public void startAnimation(ViewGroup container) {
         stopAnimation();
         findAndAnimateSkeletonViews(container);
@@ -48,10 +44,7 @@ public class SkeletonAnimator {
         animator.start();
         animators.add(animator);
     }
-    
-    /**
-     * Animate specific views with shimmer effect.
-     */
+
     public void animateViews(View... views) {
         stopAnimation();
         for (int i = 0; i < views.length; i++) {
@@ -63,10 +56,7 @@ public class SkeletonAnimator {
             animators.add(animator);
         }
     }
-    
-    /**
-     * Stop all running animations.
-     */
+
     public void stopAnimation() {
         for (ObjectAnimator animator : animators) {
             animator.cancel();

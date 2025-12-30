@@ -12,7 +12,6 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- Logo -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +41,6 @@
                 android:textSize="24sp" />
         </LinearLayout>
 
-        <!-- Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,7 +57,6 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
-                <!-- Header -->
                 <TextView
                     android:id="@+id/tvTitle"
                     android:layout_width="match_parent"
@@ -81,7 +78,6 @@
                     android:textColor="@color/muted_foreground"
                     android:textSize="14sp" />
 
-                <!-- Credentials Form -->
                 <LinearLayout
                     android:id="@+id/credentialsForm"
                     android:layout_width="match_parent"
@@ -89,7 +85,6 @@
                     android:layout_marginTop="32dp"
                     android:orientation="vertical">
 
-                    <!-- Email Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -126,7 +121,6 @@
                             app:tint="@color/muted_foreground" />
                     </FrameLayout>
 
-                    <!-- Password Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -164,7 +158,6 @@
                             app:tint="@color/muted_foreground" />
                     </FrameLayout>
 
-                    <!-- Login Button -->
                     <Button
                         android:id="@+id/btnLogin"
                         style="@style/Widget.BingoArena.Button.Primary"
@@ -173,7 +166,6 @@
                         android:layout_marginTop="24dp"
                         android:text="@string/login" />
 
-                    <!-- Loading -->
                     <ProgressBar
                         android:id="@+id/progressBar"
                         android:layout_width="24dp"
@@ -184,7 +176,6 @@
                         android:visibility="gone" />
                 </LinearLayout>
 
-                <!-- OTP Form (hidden initially) -->
                 <LinearLayout
                     android:id="@+id/otpForm"
                     android:layout_width="match_parent"
@@ -193,7 +184,6 @@
                     android:orientation="vertical"
                     android:visibility="gone">
 
-                    <!-- OTP Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -223,7 +213,6 @@
                             android:textSize="24sp" />
                     </FrameLayout>
 
-                    <!-- Verify Button -->
                     <Button
                         android:id="@+id/btnVerify"
                         style="@style/Widget.BingoArena.Button.Primary"
@@ -232,7 +221,6 @@
                         android:layout_marginTop="24dp"
                         android:text="@string/verify" />
 
-                    <!-- Resend OTP -->
                     <Button
                         android:id="@+id/btnResendOtp"
                         style="@style/Widget.BingoArena.Button.Ghost"
@@ -243,7 +231,6 @@
                         android:text="@string/resend_otp" />
                 </LinearLayout>
 
-                <!-- Sign Up Link -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

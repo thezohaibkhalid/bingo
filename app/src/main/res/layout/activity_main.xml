@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Navbar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="64dp"
@@ -20,7 +19,6 @@
             android:orientation="horizontal"
             android:paddingHorizontal="20dp">
 
-            <!-- Logo -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -51,7 +49,6 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <!-- Auth Buttons -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,7 +72,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Hero Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,7 +81,6 @@
             android:paddingTop="80dp"
             android:paddingBottom="60dp">
 
-            <!-- Badge -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,7 +106,6 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Title -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -123,7 +117,6 @@
                 android:textSize="36sp"
                 android:lineSpacingMultiplier="1.1" />
 
-            <!-- Subtitle -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -135,7 +128,6 @@
                 android:textSize="16sp"
                 android:lineSpacingMultiplier="1.4" />
 
-            <!-- CTA Button -->
             <Button
                 android:id="@+id/btnStartPlaying"
                 style="@style/Widget.BingoArena.Button.Primary"
@@ -147,7 +139,6 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Features Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,25 +155,21 @@
                 android:textColor="@color/foreground"
                 android:textSize="28sp" />
 
-            <!-- Feature Cards Container -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:orientation="vertical">
 
-                <!-- Feature 1 -->
                 <include
                     android:id="@+id/feature1"
                     layout="@layout/item_feature" />
 
-                <!-- Feature 2 -->
                 <include
                     android:id="@+id/feature2"
                     layout="@layout/item_feature"
                     android:layout_marginTop="16dp" />
 
-                <!-- Feature 3 -->
                 <include
                     android:id="@+id/feature3"
                     layout="@layout/item_feature"
@@ -191,7 +178,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- How To Play Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -219,25 +205,21 @@
                 android:textColor="@color/muted_foreground"
                 android:textSize="16sp" />
 
-            <!-- Steps -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:orientation="vertical">
 
-                <!-- Step 1 -->
                 <include
                     android:id="@+id/step1"
                     layout="@layout/item_step" />
 
-                <!-- Step 2 -->
                 <include
                     android:id="@+id/step2"
                     layout="@layout/item_step"
                     android:layout_marginTop="24dp" />
 
-                <!-- Step 3 -->
                 <include
                     android:id="@+id/step3"
                     layout="@layout/item_step"
@@ -246,7 +228,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- CTA Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -285,7 +266,6 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Footer -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

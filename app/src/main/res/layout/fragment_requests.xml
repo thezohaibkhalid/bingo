@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Incoming Section -->
         <LinearLayout
             android:id="@+id/incomingSection"
             android:layout_width="match_parent"
@@ -33,7 +32,6 @@
                 android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
-        <!-- Outgoing Section -->
         <LinearLayout
             android:id="@+id/outgoingSection"
             android:layout_width="match_parent"
@@ -57,7 +55,6 @@
                 android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
-        <!-- Empty State -->
         <LinearLayout
             android:id="@+id/emptyState"
             android:layout_width="match_parent"
